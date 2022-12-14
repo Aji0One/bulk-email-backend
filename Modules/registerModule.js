@@ -90,7 +90,7 @@ exports.forgotpassword= async (req, res) => {
     const token=jwt.sign(existUser,secret,{expiresIn:'10m'});
 
     //temporary link for reseting the password
-    const link=`https://fs-mail.onrender.com/register/resetpassword/${existUser._id}/${token}`;
+    const link=`https://bulk-email.onrender.com/register/resetpassword/${existUser._id}/${token}`;
 
     //option on which user to send the email as part of nodemailer
     var mailOption={
